@@ -6,7 +6,7 @@ export function AboutSection() {
   const paragraphs = tObject<string[]>('about.paragraphs');
 
   return (
-    <Section id="experience" $variant="paper">
+    <Section id="approach" $variant="light">
       <Container>
         <Grid2>
           <div>

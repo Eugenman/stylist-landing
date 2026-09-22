@@ -5,6 +5,10 @@ export const Item = styled.div<{ $onAccent?: boolean }>`
   border-bottom: 1px solid
     ${({ $onAccent, theme }) => ($onAccent ? 'rgba(255, 255, 255, 0.2)' : theme.colors.line)};
 
+  &:last-child {
+    border-bottom: 0;
+  }
+
   strong {
     display: block;
     font-size: 16px;

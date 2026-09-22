@@ -8,7 +8,7 @@ export function CasesSection() {
   const items = tObject<TaskItemContent[]>('cases.items');
 
   return (
-    <Section $variant="light">
+    <Section id="situations" $variant="light">
       <Container>
         <SectionLabel>{i18n.t('cases.label')}</SectionLabel>
         <SectionTitle>

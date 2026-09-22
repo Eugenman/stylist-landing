@@ -16,6 +16,9 @@ export const theme = {
     sans: 'Arial, Helvetica, sans-serif',
     serif: 'Georgia, "Times New Roman", serif',
   },
+  radii: {
+    block: '12px',
+  },
   breakpoints: {
     mobile: '800px',
   },

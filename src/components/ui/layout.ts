@@ -20,6 +20,7 @@ export const Grid2 = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 `;
 
@@ -48,7 +49,7 @@ export const Section = styled.section<{ $variant?: SectionVariant }>`
   ${({ $variant = 'default' }) => sectionVariantStyles[$variant]}
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 70px 0;
+    padding: 48px 0;
   }
 `;
 
@@ -79,10 +80,10 @@ export const ButtonRow = styled.div`
 
 export const ContactLinks = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 14px;
+  align-items: center;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 28px;
 `;
 
 export const FooterBar = styled.footer`

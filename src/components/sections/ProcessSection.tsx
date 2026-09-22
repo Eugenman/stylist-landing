@@ -7,7 +7,7 @@ export function ProcessSection() {
   const items = tObject<ListItemContent[]>('process.items');
 
   return (
-    <Section $variant="accent">
+    <Section id="process" $variant="accent">
       <Container>
         <Grid2>
           <div>

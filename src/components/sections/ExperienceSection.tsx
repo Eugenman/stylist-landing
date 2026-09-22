@@ -7,21 +7,16 @@ export function ExperienceSection() {
   const items = tObject<ListItemContent[]>('experience.items');
 
   return (
-    <Section $variant="accent">
+    <Section id="experience" $variant="paper">
       <Container>
         <Grid2>
           <div>
-            <SectionLabel $onAccent>{i18n.t('experience.label')}</SectionLabel>
+            <SectionLabel>{i18n.t('experience.label')}</SectionLabel>
             <SectionTitle>{i18n.t('experience.title')}</SectionTitle>
           </div>
-          <ItemList $onAccent>
+          <ItemList>
             {items.map((item) => (
-              <ListItem
-                key={item.title}
-                title={item.title}
-                description={item.description}
-                onAccent
-              />
+              <ListItem key={item.title} title={item.title} description={item.description} />
             ))}
           </ItemList>
         </Grid2>

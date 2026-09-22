@@ -1,16 +1,24 @@
+import styled from 'styled-components';
 import i18n, { tObject, type ListItemContent } from '../../i18n';
 import { Container, Grid2, ItemList, Section } from '../ui/layout';
 import { ListItem } from '../ui/ListItem';
-import { SectionLabel } from '../ui/typography';
+import { SectionLabel, SectionTitle } from '../ui/typography';
+
+const SkillsGrid = styled(Grid2)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    gap: 0;
+  }
+`;
 
 export function SkillsSection() {
   const columns = tObject<ListItemContent[][]>('skills.columns');
 
   return (
-    <Section>
+    <Section id="services">
       <Container>
         <SectionLabel>{i18n.t('skills.label')}</SectionLabel>
-        <Grid2>
+        <SectionTitle>{i18n.t('skills.title')}</SectionTitle>
+        <SkillsGrid>
           {columns.map((column) => (
             <ItemList key={column[0].title}>
               {column.map((item) => (
@@ -18,7 +26,7 @@ export function SkillsSection() {
               ))}
             </ItemList>
           ))}
-        </Grid2>
+        </SkillsGrid>
       </Container>
     </Section>
   );

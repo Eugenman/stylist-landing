@@ -3,6 +3,7 @@ import { CardLabel, CardText, CardTitle } from './typography';
 
 const Card = styled.article`
   background: ${({ theme }) => theme.colors.paper};
+  border-radius: ${({ theme }) => theme.radii.block};
   padding: 34px;
   min-height: 260px;
 `;

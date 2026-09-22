@@ -36,7 +36,21 @@ export type TaskItemContent = {
 export type ContactLinkContent = {
   label: string;
   href: string;
-  primary?: boolean;
+  icon: 'telegram' | 'vk';
+  showLabel?: boolean;
+};
+
+export type NavigationLinkContent = {
+  label: string;
+  href: string;
+};
+
+export type ReviewContent = {
+  author: string;
+  context: string;
+  paragraphs: string[];
+  sourceLabel: string;
+  sourceHref: string;
 };
 
 export default i18n;
